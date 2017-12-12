@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Региональный центр закупок</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<!--[if IE 8]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div class="panel__row">
+				<ul class="panel__contacts">
+					<li class="panel__contacts_phone">
+						<a href="tel:+79609662230">+7 960 966-22-30</a>
+					</li>
+					<li class="panel__contacts_email">
+						<a href="mailto:rczakupki@gmail.com">rczakupki@gmail.com</a>
+					</li>
+					<li class="panel__contacts_pin">
+						Барнаул, ул. Сухэ-Батора, 33В
+					</li>
+				</ul>
+				<div class="panel__search">
+					<input type="text" placeholder="Поиск">
+					<input type="submit" value="">
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="header__row">
+				<a href="#" class="header--logo">
+					<span>Региональный центр<br> закупок</span>
+				</a>
+				<nav class="nav">
+					<a href="#" class="is-active">Главная</a>
+					<a href="#">О компании</a>
+					<a href="#">Услуги</a>
+					<a href="#">Контакты</a>
+				</nav>
+			</div>
+		</header>
+		<div class="title-h1">
+			<div class="title-h1__row">
+				<span>Контакты</span>
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="contacts__row">
+				<div class="contacts__lc">
+					<div class="contacts__item">
+						<span class="contacts--title">ООО «Региональный Центр Закупок»</span>
+						<p>Место нахождения: 350078, г. Краснодар, ул. Кияшко, д.4.</p>
+						<p>Фактическое нахождение: 350044, г. Барнаул, ул. Сухэ Батора, д. 33В.</p>
+					</div>
+					<div class="contacts__item">
+						<span class="contacts--title">Директор:</span>
+						<p>Порошин Евгений Александрович</p>
+						<p>E-mail: <a href="#">rczakupki@gmail.com</a></p>
+						<p>Телефон: 8-960-966-2230</p>
+					</div>
+					<div class="contacts__item">
+						<span class="contacts--title">Банковские реквизиты:</span>
+						<p>Номер счета 40702810326180001279;</p>
+						<p>Кор/сч. 30101810500000000207;</p>
+						<p>ИНН 2311225508;</p>
+						<p>КПП 231101001;</p>
+						<p>ОГРН 1162375049880;</p>
+						<p>БИК 046015207;</p>
+						<p>Филиал «Ростовский» АО «АЛЬФА-БАНК».</p>
+					</div>
+				</div>
+				<div class="contacts__form">
+					<span class="contacts__form--title">Связаться с нами</span>
+					<input type="text" placeholder="Ваше имя или название компании">
+					<input type="text" placeholder="Контактный телефон">
+					<input type="text" placeholder="Ваш e-mail">
+					<textarea rows="3" placeholder="Сообщение:"></textarea>
+					<span class="contacts__form--agreement">Нажимая кнопку, вы даете согласие на обработку персональных данных в соответствии с <a href="#">Договором</a></span>
+					<input type="submit" class="button" value="Задать вопрос">
+				</div>
+			</div>
+		</div>
+		<div id="map"></div>
+		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script>
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map', {
+						center: [53.349803224976114,83.68003945767211],
+						zoom: 16
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+					myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						balloonContent: '«Региональный Центр Закупок»<br>\
+							г.Барнаул,<br>\
+							ул. Сухэ-Батора, 33В'
+					}, {
+						iconLayout: 'default#image',
+						iconImageHref: './img/map-pin.png',
+						iconImageSize: [45, 63],
+						iconImageOffset: [-22, -63]
+					}
+				);
+				myMap.geoObjects.add(myPlacemark);
+			});
+		</script>
+	</div>
+	<div class="footer">
+		<div class="footer__row">
+			<div class="footer__info">
+				<span class="footer--title">Наши реквизиты</span>
+				<p>ООО «Региональный Центр Закупок»</p>
+				<p>Место нахождения: 350078, г. Краснодар, ул. Кияшко, д.4.</p>
+				<p>Фактический адрес: 350044, г. Барнаул, ул. Сухэ Батора, д. 33В</p>
+				<p>ИНН/КПП 2311225508/231101001</p>
+				<p>ОГРН 1162375049880</p>
+				<p>Тел.: 8-960-966-2230</p>
+				<p>E-mail: <a href="#">rczakupki@gmail.com</a></p>
+			</div>
+			<div class="footer__nav">
+				<span class="footer--title">Разделы сайта</span>
+				<ul>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="footer__feedback">
+				<span class="footer--title">Разделы сайта</span>
+				<div class="footer__form">
+					<input type="text" placeholder="Ваше имя">
+					<input type="text" placeholder="Ваш e-mail">
+					<textarea rows="3" placeholder="Текст вопроса"></textarea>
+					<input type="submit" value="Задать вопрос">
+					<span class="footer--agreement">Нажимая кнопку, вы даете согласие на обработку персональных данных в соответствии с <a href="#">Договором</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="copyright__row">
+			<span class="copyright--text">2017 © ООО «Региональный центр закупок»</span>
+			<span class="copyright--author">Разработка сайта — <a href="http://letsrock.pro/" target="_blank"><img src="./img/letsrock-logo.png" width="190" height="41" alt=""></a></span>
+		</div>
+	</div>
+	<div class="fade-bg"></div>
+	<script src="./js/libs.js"></script>
+	<script src="./js/scripts.js"></script>
+</body>
+</html>
