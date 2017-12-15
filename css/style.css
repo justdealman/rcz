@@ -511,7 +511,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	position:absolute;
 	left:50%;
 	top:50%;
-	max-width:202px;
+	width:auto;
 	max-height:120px;
 	-webkit-transform:translate(-50%,-50%);
 	transform:translate(-50%,-50%);
