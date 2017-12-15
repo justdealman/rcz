@@ -1035,7 +1035,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .content__table--pic {
 	display:table-cell;
 	width:1%;
-	vertical-align:middle;
+	vertical-align:top;
 	padding:22px 40px 22px 0;
 }
 .content__table--text {
